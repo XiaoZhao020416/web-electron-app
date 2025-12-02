@@ -1,18 +1,21 @@
-# Vue 3 + TypeScript + Vite
+# 安装依赖
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+npm install
 
-## Recommended IDE Setup
+## 源码说明
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+如果缓存图片时无需清空已有图片，需要在 electron/main.ts 中删除：
 
-## Type Support For `.vue` Imports in TS
+<img width="551" height="274" alt="image" src="https://github.com/user-attachments/assets/e96d568f-f6d6-441b-a74c-bc8bf614552e" />
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+在 electron/preload.ts 中删除：
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+<img width="685" height="126" alt="image" src="https://github.com/user-attachments/assets/9411c3b7-ba6a-4fe8-b4cd-58358424829a" />
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+在 App.vue 中取消使用：
+
+<img width="272" height="51" alt="image" src="https://github.com/user-attachments/assets/a405a5bb-7fe3-4734-9f4f-708167d1f197" />
+
+如果想修改本地缓存目录：
+
+<img width="852" height="72" alt="image" src="https://github.com/user-attachments/assets/1c79c541-98b1-4ff3-9a4f-13a9823f2985" />
